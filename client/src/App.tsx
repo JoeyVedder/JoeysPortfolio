@@ -1,27 +1,8 @@
-import About from './components/About';
-import Contact from './components/Contact';
-import Experience from './components/Experience';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-import Resume from './components/Resume';
-import ParticleBackground from './components/ParticleBackground';
+import React from 'react'
+import SolarSystemPortfolio from './components/SolarSystemPortfolio';
 
-function App() {
-  return (
-    <>
-      <ParticleBackground />
-      <About />
-      <Contact />
-      <Experience />
-      <Footer />
-      <Hero />
-      <Navbar />
-      <Projects />
-      <Resume />
-    </>
-  );
-}
+const App: React.FC = () => {
+  return <SolarSystemPortfolio />;
+};
 
 export default App;
