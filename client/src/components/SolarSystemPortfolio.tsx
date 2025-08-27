@@ -20,7 +20,7 @@ export interface PlanetInfo {
 }
 
 const SolarSystemPortfolio: React.FC = () => {
-    const [activeTab, setActiveTab] = useState<strin>('home');
+    const [activeTab, setActiveTab] = useState<string>('home');
 
     const planets: PlanetInfo[] = [
         {name: 'about', position: [6, 0, 0], size: 1, color: '#504E51', label: 'Mercury - About Me'},
@@ -50,8 +50,26 @@ const SolarSystemPortfolio: React.FC = () => {
                           isActive={activeTab === planet.name}
                           />
                       ))}
+                      <OrbitControls
+                      enableZoom={true}
+                      enablePan={true}
+                      maxDistance={30}
+                      minDistance={8}
+                      />
                 </Canvas>
             </div>
+
+            <Navigation
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            planets={planets}
+            />
+
+            <ContentArea activeTab={activeTab} />
+
+            <Instructions />
         </div>
-    )
-}
+    );
+};
+
+export default SolarSystemPortfolio;
