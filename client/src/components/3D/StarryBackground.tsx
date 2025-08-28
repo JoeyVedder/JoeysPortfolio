@@ -7,8 +7,8 @@ const StarryBackground: React.FC = () => {
     const starGeometry = useRef<THREE.BufferGeometry>(new THREE.BufferGeometry());
 
     useEffect(() => {
-        const positions = new Float32Array(20000 * 3);
-        for (let i = 0; i <2000; i++) {
+        const positions = new Float32Array(2000 * 3); // Typed Array for 2000 vertices, each needing 3 values (x, y, and z)
+        for (let i = 0; i < 2000; i++) {
             positions[i * 3] = (Math.random() - 0.5) * 2000;
             positions[i * 3 + 1] = (Math.random() - 0.5) * 2000;
             positions[i * 3 + 2] = (Math.random() - 0.5) * 2000;
