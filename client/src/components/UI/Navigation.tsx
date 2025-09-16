@@ -26,7 +26,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, setActiveTab, planet
                   : 'text-yellow-400 hover:bg-yellow-500/20'
               }`}
             >
-              ☉ Sun
+              {/* cool sun icon i found  */}
+              ☉ Sun 
             </button>
             {planets.map((planet) => (
               <button
